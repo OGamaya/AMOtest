@@ -28,6 +28,7 @@ def login_view(request):
             mensaje = 'Ok'
         else:
             mensaje = 'Nombre de usuario o clave invalido'
+        """creo q al fin lo logré"""
     return JsonResponse({'mensaje':mensaje})
 
 @csrf_exempt
