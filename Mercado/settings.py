@@ -25,7 +25,7 @@ SECRET_KEY = 'lf+as3c6(iyt0v=)z9@8$@k)!!egefbq4js@+mw9kat_&09nms'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['heroku.com','50.19.85.154','mercado-g4.herokuapp.com','localhost']
+ALLOWED_HOSTS = ['py-power.heroku.com','50.19.85.154','mercado-g4.herokuapp.com','localhost']
 
 
 # Application definition
