@@ -11,4 +11,5 @@ class AnimalTestCase(TestCase):
         """Animals that can speak are correctly identified"""
         print ("@@@@@@@@@@@@@@@@@@@@")
         print ("##############")
+        print ("##############")
         self.assertEqual('The cat says "meow"', 'The cat says "meow"')
