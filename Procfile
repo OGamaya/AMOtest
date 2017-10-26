@@ -1,0 +1,1 @@
+web: gunicorn Mercado.wsgi --log-file -
