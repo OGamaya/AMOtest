@@ -28,7 +28,7 @@ def login_view(request):
             mensaje = 'Ok'
         else:
             mensaje = 'Nombre de usuario o clave invalido'
-
+        """commit para test"""
     return JsonResponse({'mensaje':mensaje})
 
 @csrf_exempt
