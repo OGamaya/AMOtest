@@ -18,7 +18,7 @@ from django.conf.global_settings import DATABASES
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 #ON_HEROKU = os.environ.get('ON_HEROKU')
-ON_HEROKU = os.getenv('ON_HEROKU', False)
+ON_CODESHIP = os.getenv('ON_CODESHIP', False)
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
@@ -76,18 +76,7 @@ WSGI_APPLICATION = 'Mercado.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
-if ON_HEROKU:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'd3jqdrkap6obug',
-            'USER': 'yfbtjbeaegjvfn',
-            'PASSWORD': 'aa2d2b30c730dbcde00d7d52b967751dccfa658e5446b326f4f81fcb121bca64',
-            'HOST': 'ec2-184-72-223-199.compute-1.amazonaws.com',
-            'PORT': '5432',
-        }
-    }
-else:
+if ON_CODESHIP:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -95,6 +84,17 @@ else:
             'USER': os.environ.get('PGUSER'),
             'PASSWORD': os.environ.get('PGPASSWORD'),
             'HOST': '127.0.0.1',
+        }
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'db5rojukac56i4',
+            'USER': 'lomhagsudmbfjo',
+            'PASSWORD': '8ad5805b05aeae2cef0962f1d50c456d32e2f4df66ed55e6a94757195f95afa0',
+            'HOST': 'ec2-23-21-220-32.compute-1.amazonaws.com',
+            'PORT': '5432',
         }
     }
 
