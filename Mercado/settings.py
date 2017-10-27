@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'Mercado.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
-"""
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -86,8 +86,9 @@ DATABASES = {
         'HOST': 'ec2-184-72-223-199.compute-1.amazonaws.com',
         'PORT': '5432',
     }
-}"""
-"""DATABASES = {
+}
+"""
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'test',
@@ -96,7 +97,7 @@ DATABASES = {
         'HOST': '127.0.0.1',
     }
 }"""
-DATABASES['default'] =  dj_database_url.config()
+
 
 
 # Password validation
