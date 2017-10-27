@@ -13,6 +13,9 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+import dj_database_url
+from django.conf.global_settings import DATABASES
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -83,8 +86,8 @@ DATABASES = {
         'HOST': 'ec2-184-72-223-199.compute-1.amazonaws.com',
         'PORT': '5432',
     }
-}"""
-
+}
+# Configuración para CI
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -93,8 +96,8 @@ DATABASES = {
         'PASSWORD': os.environ.get('PGPASSWORD'),
         'HOST': '127.0.0.1',
     }
-}
-
+}"""
+DATABASES['default'] =  dj_database_url.config()
 
 
 # Password validation
