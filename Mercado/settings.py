@@ -86,9 +86,8 @@ DATABASES = {
         'HOST': 'ec2-184-72-223-199.compute-1.amazonaws.com',
         'PORT': '5432',
     }
-}
-# Configuración para CI
-DATABASES = {
+}"""
+"""DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'test',
